@@ -25,3 +25,9 @@ def test_divide_by_zero():
     calc = Calculator()
     with pytest.raises(ValueError):
         calc.divide(1, 0)
+def test_power():
+    """Test power operation."""
+    calc = Calculator()
+    assert calc.power(2, 3) == 8
+    assert calc.power(5, 0) == 1
+    assert calc.power(2, -1) == 0.5
