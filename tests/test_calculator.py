@@ -25,3 +25,10 @@ def test_divide_by_zero():
     calc = Calculator()
     with pytest.raises(ValueError):
         calc.divide(1, 0)
+
+def test_square_root():
+    calc = Calculator()
+    assert calc.square_root(16) == 4
+    assert calc.square_root(0) == 0
+    with pytest.raises(ValueError):
+        calc.square_root(-4)
